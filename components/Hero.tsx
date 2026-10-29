@@ -16,8 +16,8 @@ export function Hero() {
           Free 1-hour one-to-one consultation
         </p>
         <h1 className="text-balance text-[clamp(2.25rem,8.7vw,4.75rem)] font-extrabold leading-[1.06] tracking-[-0.045em] text-heading">
-          Struggling to Sell? Get a{" "}
-          <span className="text-primary">Free Marketing Plan</span> Made for Your Business.
+          <span className="block">Sales Stuck?</span>
+          <span className="block text-primary">Your Next 10 Customers Start Here.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg font-medium leading-8 text-body sm:text-xl">
           Book a free 1-hour one-to-one call. Leave with a customized marketing plan in PDF format.
