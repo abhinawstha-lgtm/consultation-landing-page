@@ -26,7 +26,7 @@ const infoBlocks = [
   },
   {
     title: "One-to-One Consultation",
-    description: "A direct 1-hour conversation about your business. No group calls.",
+    description: "A direct 30–40 minute conversation about your business. No group calls.",
     icon: UserRound,
   },
   {

@@ -5,7 +5,7 @@ const steps = [
   },
   {
     title: "Book your one-to-one call.",
-    description: "We talk for 1 hour about your business and your sales problem.",
+    description: "We talk for 30–40 minutes about your business and your sales problem.",
   },
   {
     title: "Get your customized plan.",

@@ -1,7 +1,7 @@
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 
 const consultationIncludes = [
-  "A direct 1-hour one-to-one business call",
+  "A direct 30–40 minute one-to-one business call",
   "A strategy built around your products or services",
   "A customized marketing plan in PDF format",
 ];
@@ -25,7 +25,7 @@ export function Hero() {
       <div className="animate-rise-in mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:gap-14">
         <div className="text-center lg:text-left">
           <p className="soft-pulse mb-5 inline-flex rounded-full border border-primary/10 bg-primary-tint px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-primary sm:text-sm">
-            Free 1-hour one-to-one consultation
+            Free 30–40 minute one-to-one consultation
           </p>
           <h1 className="text-balance text-[clamp(2.25rem,8.7vw,4.6rem)] font-extrabold leading-[1.06] tracking-[-0.045em] text-heading lg:text-[clamp(3.25rem,5.8vw,4.6rem)]">
             <span className="block">Sales Stuck?</span>

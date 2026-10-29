@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Free AI Marketing Consultation | Abhinav Shrestha",
   description:
-    "Book a free 1-hour one-to-one AI marketing consultation and get a customized digital marketing plan in PDF format for your business.",
+    "Book a free 30–40 minute one-to-one AI marketing consultation and get a customized digital marketing plan in PDF format for your business.",
   openGraph: {
     title: "Free AI Marketing Consultation | Abhinav Shrestha",
     description:
-      "Book a free 1-hour one-to-one AI marketing consultation and get a customized digital marketing plan in PDF format for your business.",
+      "Book a free 30–40 minute one-to-one AI marketing consultation and get a customized digital marketing plan in PDF format for your business.",
     url: siteUrl,
     siteName: "Abhinav Shrestha",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Free AI Marketing Consultation | Abhinav Shrestha",
     description:
-      "Book a free 1-hour one-to-one AI marketing consultation and get a customized digital marketing plan in PDF format for your business.",
+      "Book a free 30–40 minute one-to-one AI marketing consultation and get a customized digital marketing plan in PDF format for your business.",
     images: ["/og.png"],
   },
   // TODO: Add a favicon cropped from the blue “A” icon in the logo.
