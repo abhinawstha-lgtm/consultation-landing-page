@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+:root {
+  --brand-primary: #00308c;
+  --brand-primary-dark: #00246b;
+  --brand-secondary: #2f5bd3;
+  --brand-primary-tint: #e8eefb;
+  --brand-background: #ffffff;
+  --brand-soft: #f6f8fc;
+  --brand-heading: #0a0a0a;
+  --brand-body: #475569;
+  --brand-border: #e2e8f0;
+  --brand-error: #dc2626;
+  --brand-whatsapp: #25d366;
+}
+
+@theme inline {
+  --color-primary: var(--brand-primary);
+  --color-primary-dark: var(--brand-primary-dark);
+  --color-secondary: var(--brand-secondary);
+  --color-primary-tint: var(--brand-primary-tint);
+  --color-background: var(--brand-background);
+  --color-soft: var(--brand-soft);
+  --color-heading: var(--brand-heading);
+  --color-body: var(--brand-body);
+  --color-border: var(--brand-border);
+  --color-error: var(--brand-error);
+  --color-whatsapp: var(--brand-whatsapp);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--brand-background);
+  color: var(--brand-heading);
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--brand-primary-tint);
+  color: var(--brand-primary-dark);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 650ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
