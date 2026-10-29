@@ -1,4 +1,5 @@
 import { FileText, ListChecks, PlayCircle, SearchCheck, UserRound } from "lucide-react";
+import { DecorativeDots } from "@/components/DecorativeDots";
 
 const benefits = [
   { text: "Know what to fix first to get more sales", icon: SearchCheck },
@@ -10,7 +11,9 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section className="px-5 py-16 sm:py-24" aria-labelledby="benefits-heading">
+    <section className="relative isolate overflow-hidden px-5 py-16 sm:py-24" aria-labelledby="benefits-heading">
+      <DecorativeDots className="-right-6 top-10 opacity-45 sm:right-8 sm:top-16" />
+      <div className="decorative-ring pointer-events-none absolute -bottom-20 -left-20 -z-10 h-56 w-56 rounded-full opacity-60" aria-hidden="true" />
       <div className="section-reveal mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">What you leave with</p>

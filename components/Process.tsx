@@ -16,7 +16,10 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="bg-primary px-5 py-16 text-white sm:py-24" aria-labelledby="process-heading">
+    <section className="relative isolate overflow-hidden bg-primary px-5 py-16 text-white sm:py-24" aria-labelledby="process-heading">
+      <div className="process-grid pointer-events-none absolute inset-0 -z-10" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-20 -top-24 -z-10 h-72 w-72 rounded-full border border-white/10" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-8 -top-12 -z-10 h-48 w-48 rounded-full border border-white/10" aria-hidden="true" />
       <div className="section-reveal mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-white/70">Simple and focused</p>

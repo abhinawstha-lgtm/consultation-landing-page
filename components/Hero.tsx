@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden px-5 pb-16 pt-14 sm:pb-24 sm:pt-20">
+      <div className="hero-grid pointer-events-none absolute inset-0 -z-20" aria-hidden="true" />
       <div
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 mx-auto h-[520px] max-w-5xl opacity-90"
         style={{
@@ -13,6 +14,8 @@ export function Hero() {
       />
       <div className="float-soft pointer-events-none absolute left-[4%] top-24 -z-10 h-24 w-24 rounded-full bg-primary-tint/80 blur-2xl sm:h-40 sm:w-40" aria-hidden="true" />
       <div className="float-soft-delayed pointer-events-none absolute right-[3%] top-40 -z-10 h-20 w-20 rounded-full bg-secondary/10 blur-2xl sm:h-36 sm:w-36" aria-hidden="true" />
+      <div className="decorative-ring pointer-events-none absolute -left-14 top-1/3 -z-10 h-32 w-32 rounded-full sm:left-[3%] sm:h-44 sm:w-44" aria-hidden="true" />
+      <div className="decorative-ring pointer-events-none absolute -right-12 bottom-10 -z-10 h-24 w-24 rounded-full sm:right-[5%] sm:h-36 sm:w-36" aria-hidden="true" />
       <div className="animate-rise-in mx-auto max-w-4xl text-center">
         <p className="soft-pulse mb-5 inline-flex rounded-full border border-primary/10 bg-primary-tint px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-primary sm:text-sm">
           Free 1-hour one-to-one consultation

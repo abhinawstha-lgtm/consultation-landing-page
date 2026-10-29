@@ -1,4 +1,5 @@
 import { CircleAlert } from "lucide-react";
+import { DecorativeDots } from "@/components/DecorativeDots";
 
 const problems = [
   "Your page gets likes and views. But few real sales.",
@@ -10,7 +11,9 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="bg-soft px-5 py-16 sm:py-24" aria-labelledby="problem-heading">
+    <section className="relative isolate overflow-hidden bg-soft px-5 py-16 sm:py-24" aria-labelledby="problem-heading">
+      <div className="pointer-events-none absolute -right-24 -top-24 -z-10 h-72 w-72 rounded-full bg-primary-tint/70 blur-3xl" aria-hidden="true" />
+      <DecorativeDots className="-bottom-5 -left-5 opacity-60 sm:bottom-10 sm:left-8" />
       <div className="section-reveal mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">The real problem</p>

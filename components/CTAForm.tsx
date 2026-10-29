@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { CalendarCheck, FileCheck2, LockKeyhole, MessageSquareText, UserRound } from "lucide-react";
+import { DecorativeDots } from "@/components/DecorativeDots";
 import { submitLead } from "@/lib/submitLead";
 import { validateLead } from "@/lib/validation";
 import type { LeadFormData, LeadFormErrors } from "@/lib/validation";
@@ -110,7 +111,9 @@ export function CTAForm() {
   }
 
   return (
-    <section id="book" className="scroll-mt-4 bg-soft px-5 py-16 sm:py-24" aria-labelledby="booking-heading">
+    <section id="book" className="relative isolate scroll-mt-4 overflow-hidden bg-soft px-5 py-16 sm:py-24" aria-labelledby="booking-heading">
+      <DecorativeDots className="-left-8 top-16 opacity-50 sm:left-8" />
+      <div className="decorative-ring pointer-events-none absolute -bottom-24 -right-24 -z-10 h-72 w-72 rounded-full opacity-70" aria-hidden="true" />
       <div className="section-reveal mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">Your next step</p>
