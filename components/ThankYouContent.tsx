@@ -37,6 +37,8 @@ export function ThankYouContent() {
         }}
         aria-hidden="true"
       />
+      <div className="float-soft pointer-events-none absolute left-[6%] top-28 -z-10 h-24 w-24 rounded-full bg-primary-tint blur-2xl" aria-hidden="true" />
+      <div className="float-soft-delayed pointer-events-none absolute right-[6%] top-44 -z-10 h-20 w-20 rounded-full bg-secondary/10 blur-2xl" aria-hidden="true" />
       <div className="animate-rise-in mx-auto max-w-4xl text-center">
         <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-[0_12px_30px_rgba(0,48,140,0.22)]">
           <Check className="h-7 w-7" strokeWidth={3} aria-hidden="true" />
@@ -50,7 +52,7 @@ export function ThankYouContent() {
 
         <ol className="mx-auto mt-9 grid max-w-3xl gap-3 text-left">
           {steps.map((step, index) => (
-            <li key={step} className="flex items-start gap-4 rounded-2xl border border-border bg-white p-4 shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:p-5">
+            <li key={step} className="card-interactive flex items-start gap-4 rounded-2xl border border-border bg-white p-4 shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:p-5">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-tint text-sm font-extrabold text-primary">
                 {index + 1}
               </span>

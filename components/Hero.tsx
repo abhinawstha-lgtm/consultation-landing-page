@@ -11,8 +11,10 @@ export function Hero() {
         }}
         aria-hidden="true"
       />
+      <div className="float-soft pointer-events-none absolute left-[4%] top-24 -z-10 h-24 w-24 rounded-full bg-primary-tint/80 blur-2xl sm:h-40 sm:w-40" aria-hidden="true" />
+      <div className="float-soft-delayed pointer-events-none absolute right-[3%] top-40 -z-10 h-20 w-20 rounded-full bg-secondary/10 blur-2xl sm:h-36 sm:w-36" aria-hidden="true" />
       <div className="animate-rise-in mx-auto max-w-4xl text-center">
-        <p className="mb-5 inline-flex rounded-full border border-primary/10 bg-primary-tint px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-primary sm:text-sm">
+        <p className="soft-pulse mb-5 inline-flex rounded-full border border-primary/10 bg-primary-tint px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-primary sm:text-sm">
           Free 1-hour one-to-one consultation
         </p>
         <h1 className="text-balance text-[clamp(2.25rem,8.7vw,4.75rem)] font-extrabold leading-[1.06] tracking-[-0.045em] text-heading">
@@ -29,10 +31,10 @@ export function Hero() {
         </div>
         <a
           href="#book"
-          className="mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(0,48,140,0.22)] transition hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 sm:w-auto sm:min-w-64"
+          className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(0,48,140,0.22)] transition hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[0_16px_38px_rgba(0,48,140,0.28)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 sm:w-auto sm:min-w-64"
         >
           Book Free Consultation
-          <ArrowRight className="h-5 w-5" aria-hidden="true" />
+          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </a>
       </div>
     </section>

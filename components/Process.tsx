@@ -17,7 +17,7 @@ const steps = [
 export function Process() {
   return (
     <section className="bg-primary px-5 py-16 text-white sm:py-24" aria-labelledby="process-heading">
-      <div className="mx-auto max-w-5xl">
+      <div className="section-reveal mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-white/70">Simple and focused</p>
           <h2 id="process-heading" className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -26,8 +26,8 @@ export function Process() {
         </div>
         <ol className="mt-10 grid gap-4 md:grid-cols-3">
           {steps.map((step, index) => (
-            <li key={step.title} className="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-lg font-extrabold text-primary">
+            <li key={step.title} className="group rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition duration-200 hover:-translate-y-1 hover:border-white/30 hover:bg-white/15">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-lg font-extrabold text-primary shadow-lg shadow-primary-dark/20 transition-transform duration-200 group-hover:scale-110">
                 {index + 1}
               </span>
               <h3 className="mt-5 text-lg font-bold">{step.title}</h3>

@@ -11,7 +11,7 @@ const problems = [
 export function Problem() {
   return (
     <section className="bg-soft px-5 py-16 sm:py-24" aria-labelledby="problem-heading">
-      <div className="mx-auto max-w-5xl">
+      <div className="section-reveal mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">The real problem</p>
           <h2 id="problem-heading" className="mt-3 text-3xl font-extrabold tracking-tight text-heading sm:text-4xl">
@@ -22,9 +22,9 @@ export function Problem() {
           {problems.map((problem, index) => (
             <div
               key={problem}
-              className={`flex items-start gap-3 rounded-2xl border border-border bg-white p-5 ${index === problems.length - 1 ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.375rem)]" : ""}`}
+              className={`card-interactive group flex items-start gap-3 rounded-2xl border border-border bg-white p-5 ${index === problems.length - 1 ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.375rem)]" : ""}`}
             >
-              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary">
+              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary transition-transform duration-200 group-hover:rotate-6 group-hover:scale-110">
                 <CircleAlert className="h-4 w-4" aria-hidden="true" />
               </span>
               <p className="leading-7 text-body">{problem}</p>

@@ -11,7 +11,7 @@ const benefits = [
 export function Benefits() {
   return (
     <section className="px-5 py-16 sm:py-24" aria-labelledby="benefits-heading">
-      <div className="mx-auto max-w-5xl">
+      <div className="section-reveal mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">What you leave with</p>
           <h2 id="benefits-heading" className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-heading sm:text-4xl">
@@ -22,9 +22,9 @@ export function Benefits() {
           {benefits.map(({ text, icon: Icon }, index) => (
             <article
               key={text}
-              className={`rounded-3xl border border-border bg-white p-6 shadow-[0_10px_35px_rgba(15,23,42,0.05)] ${index === benefits.length - 1 ? "md:col-span-2 md:mx-auto md:w-1/2" : ""}`}
+              className={`card-interactive group rounded-3xl border border-border bg-white p-6 shadow-[0_10px_35px_rgba(15,23,42,0.05)] ${index === benefits.length - 1 ? "md:col-span-2 md:mx-auto md:w-1/2" : ""}`}
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-tint text-primary">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-tint text-primary transition-all duration-200 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </span>
               <p className="mt-5 font-bold leading-7 text-heading">{text}</p>

@@ -111,7 +111,7 @@ export function CTAForm() {
 
   return (
     <section id="book" className="scroll-mt-4 bg-soft px-5 py-16 sm:py-24" aria-labelledby="booking-heading">
-      <div className="mx-auto max-w-6xl">
+      <div className="section-reveal mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">Your next step</p>
           <h2 id="booking-heading" className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-heading sm:text-4xl">
@@ -121,8 +121,8 @@ export function CTAForm() {
 
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {infoBlocks.map(({ title, description, icon: Icon }) => (
-            <article key={title} className="flex gap-4 rounded-2xl border border-border bg-white p-5">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary">
+            <article key={title} className="card-interactive group flex gap-4 rounded-2xl border border-border bg-white p-5">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary transition-transform duration-200 group-hover:scale-110">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </span>
               <div>
@@ -136,8 +136,9 @@ export function CTAForm() {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="mx-auto mt-8 max-w-3xl rounded-[2rem] border border-border bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-10"
+          className="relative mx-auto mt-8 max-w-3xl overflow-hidden rounded-[2rem] border border-border bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-10"
         >
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" aria-hidden="true" />
           <div className="mb-8 flex items-start gap-4 border-b border-border pb-7">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary">
               <MessageSquareText className="h-5 w-5" aria-hidden="true" />
@@ -177,7 +178,7 @@ export function CTAForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="mt-7 flex min-h-14 w-full items-center justify-center rounded-full bg-primary px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(0,48,140,0.22)] transition hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 disabled:cursor-wait disabled:opacity-70"
+            className="mt-7 flex min-h-14 w-full items-center justify-center rounded-full bg-primary px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(0,48,140,0.22)] transition hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[0_16px_38px_rgba(0,48,140,0.28)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25 disabled:cursor-wait disabled:opacity-70"
           >
             {isSubmitting ? "Booking..." : "Book Free Consultation"}
           </button>
