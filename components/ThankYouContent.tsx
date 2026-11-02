@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight, Check, Flower2, MessageCircle, PlayCircle } from "lucide-react";
-import { WHATSAPP_MESSAGE } from "@/lib/config";
+import { DEFAULT_WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "@/lib/config";
 
 function getVimeoEmbedUrl(value: string | undefined) {
   if (!value) return null;
@@ -16,7 +16,7 @@ function getVimeoEmbedUrl(value: string | undefined) {
 
 export function ThankYouContent() {
   const vimeoUrl = getVimeoEmbedUrl(process.env.NEXT_PUBLIC_VIMEO_URL);
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "");
+  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || DEFAULT_WHATSAPP_NUMBER).replace(/\D/g, "");
   const whatsappUrl = whatsappNumber
     ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
     : null;
