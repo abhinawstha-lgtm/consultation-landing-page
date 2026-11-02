@@ -121,6 +121,15 @@ textarea {
   }
 }
 
+@keyframes tulip-cinematic {
+  0% {
+    transform: scale(1.02) translate3d(-0.6%, 0, 0);
+  }
+  100% {
+    transform: scale(1.09) translate3d(0.8%, -0.8%, 0);
+  }
+}
+
 .animate-rise-in {
   animation: rise-in 650ms ease-out both;
 }
@@ -147,6 +156,20 @@ textarea {
 
 .float-card {
   animation: float-card 5.5s ease-in-out 800ms infinite;
+}
+
+.tulip-clip-image {
+  animation: tulip-cinematic 5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.tulip-clip::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
 }
 
 .hero-aurora {

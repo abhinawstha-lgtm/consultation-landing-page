@@ -1,4 +1,5 @@
-import { ArrowUpRight, Check, MessageCircle, PlayCircle } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, Check, Flower2, MessageCircle, PlayCircle } from "lucide-react";
 import { WHATSAPP_MESSAGE } from "@/lib/config";
 
 function getVimeoEmbedUrl(value: string | undefined) {
@@ -21,8 +22,8 @@ export function ThankYouContent() {
     : null;
   const showDevNotices = process.env.NODE_ENV !== "production";
   const nextSteps = [
-    ...(vimeoUrl ? ["Watch the short video to understand what happens next."] : []),
     "Connect with me on WhatsApp so we can confirm a suitable call time.",
+    ...(vimeoUrl ? ["Watch the short video to understand what happens next."] : []),
     "Come ready to share your goals, biggest sales challenge, and what you’ve already tried.",
   ];
 
@@ -50,35 +51,6 @@ export function ThankYouContent() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-body">
           Thank you for sharing your business details. You&apos;ve taken the first step toward a clearer marketing plan built around your business.
         </p>
-
-        {vimeoUrl ? (
-          <section className="mt-10 overflow-hidden rounded-[2rem] border border-border bg-white p-3 text-left shadow-[0_20px_60px_rgba(15,23,42,0.1)] sm:p-5" aria-labelledby="video-heading">
-            <div className="flex items-center gap-3 px-2 pb-4 sm:px-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary">
-                <PlayCircle className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <div>
-                <h2 id="video-heading" className="font-extrabold text-heading">Watch This Before Our Call</h2>
-                <p className="mt-0.5 text-sm leading-6 text-body">See what happens next and how to prepare for a focused 30–40 minute conversation.</p>
-              </div>
-            </div>
-            <div className="overflow-hidden rounded-2xl bg-black">
-              <div className="aspect-video">
-                <iframe
-                  src={vimeoUrl}
-                  title="What happens next after your consultation request"
-                  className="h-full w-full"
-                  allow="fullscreen; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </section>
-        ) : showDevNotices ? (
-          <p className="mx-auto mt-8 max-w-md rounded-xl border border-dashed border-primary/30 bg-primary-tint px-4 py-3 text-sm font-bold text-primary">
-            Add NEXT_PUBLIC_VIMEO_URL
-          </p>
-        ) : null}
 
         <section className="mx-auto mt-10 max-w-3xl" aria-labelledby="next-steps-heading">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">Simple next steps</p>
@@ -117,6 +89,63 @@ export function ThankYouContent() {
             Add NEXT_PUBLIC_WHATSAPP_NUMBER
           </p>
         ) : null}
+
+        {vimeoUrl ? (
+          <section className="mt-10 overflow-hidden rounded-[2rem] border border-border bg-white p-3 text-left shadow-[0_20px_60px_rgba(15,23,42,0.1)] sm:p-5" aria-labelledby="video-heading">
+            <div className="flex items-center gap-3 px-2 pb-4 sm:px-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary">
+                <PlayCircle className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <div>
+                <h2 id="video-heading" className="font-extrabold text-heading">Watch This Before Our Call</h2>
+                <p className="mt-0.5 text-sm leading-6 text-body">See what happens next and how to prepare for a focused 30–40 minute conversation.</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-2xl bg-black">
+              <div className="aspect-video">
+                <iframe
+                  src={vimeoUrl}
+                  title="What happens next after your consultation request"
+                  className="h-full w-full"
+                  allow="fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+        ) : showDevNotices ? (
+          <p className="mx-auto mt-8 max-w-md rounded-xl border border-dashed border-primary/30 bg-primary-tint px-4 py-3 text-sm font-bold text-primary">
+            Add NEXT_PUBLIC_VIMEO_URL
+          </p>
+        ) : null}
+
+        <section className="mt-10 overflow-hidden rounded-[2rem] border border-primary/10 bg-white p-3 text-left shadow-[0_20px_60px_rgba(15,23,42,0.1)] sm:p-5" aria-labelledby="tulip-heading">
+          <div className="flex items-center justify-between gap-4 px-2 pb-4 sm:px-3">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary">
+                <Flower2 className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <div>
+                <h2 id="tulip-heading" className="font-extrabold text-heading">A Five-Second Moment of Calm</h2>
+                <p className="mt-0.5 text-sm leading-6 text-body">Take a quick breath, then continue with your next step.</p>
+              </div>
+            </div>
+            <span className="hidden rounded-full bg-primary-tint px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.12em] text-primary sm:inline-flex">5 sec</span>
+          </div>
+          <figure className="tulip-clip relative aspect-video overflow-hidden rounded-2xl bg-primary-tint">
+            <Image
+              src="/tulips-sunrise-clip.webp"
+              alt="Colorful tulips glowing in warm morning sunlight"
+              fill
+              sizes="(max-width: 768px) 92vw, 850px"
+              className="tulip-clip-image object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/25 via-transparent to-white/10" aria-hidden="true" />
+            <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/40 bg-white/80 px-3 py-1.5 text-xs font-bold text-primary-dark shadow-lg backdrop-blur-md sm:bottom-5 sm:left-5">
+              Breathe in. Reset. Move forward.
+            </figcaption>
+          </figure>
+        </section>
       </div>
     </section>
   );
